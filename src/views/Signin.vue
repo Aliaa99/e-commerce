@@ -1,0 +1,31 @@
+<template>
+    <v-container>
+        <v-row>
+            <v-col cols="6">
+                <img src="../assets/logo.png">
+            </v-col>
+                <v-col cols="6">
+                    <v-form class="signin">
+                        <h1>SIGN IN</h1>
+                        <v-text-field label="email" v-model="details.email">      
+                        </v-text-field>
+                        <v-text-field label="password" type="password" v-model="details.password">
+                        </v-text-field>
+
+                        <v-btn @click="login">
+                            signin
+                        </v-btn>
+                    </v-form>
+                </v-col>
+        </v-row>
+    </v-container>
+</template>
+<script>
+   export default{
+    name:'Signin',
+    data: () => ({
+        details:{email:"" , password:""},
+    }),
+
+   }
+</script>

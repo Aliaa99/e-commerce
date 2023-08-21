@@ -1,0 +1,87 @@
+@import 'variables.scss';
+
+header{
+    background-color: orange !important;
+    z-index: 1 !important;
+    position: absolute;
+    top:0px;
+    box-shadow: none !important;
+    &.onScroll {
+        background-color: black !important; 
+    }
+    img{
+        width: 50px;
+        height: 50px;
+    }
+    h1{
+      color:$second-color;
+      i{
+        margin-bottom: 10px;
+      }
+    }
+    .nav-list{        
+        .nav-btn{
+            background-color: transparent !important;
+            color: white;
+            box-shadow: 0px 0px;
+            &:active , &:hover{
+              background-color: $second-color;
+              color: #000;
+            }
+        }             
+    }
+    .nav-menu{
+      display: none;
+    }
+
+    @media screen and (max-width: 760px) {
+      .v-toolbar__content, .v-toolbar__extension {
+          display: block !important;
+          width: 100%;
+          background-color: black;
+          height: auto !important;
+        }
+        .nav-menu{
+          background-color: black !important;
+          color: white !important;
+          float: right;
+          top: -35px;
+          display: block;
+        }
+        .nav-btn{
+          display: inline-flex;
+          margin: auto;
+        }
+         .hidden{
+          display: none;
+         }
+         .small{
+         }
+
+      }
+
+      
+}
+.v-menu__content{
+  // top: 7% !important;
+  .v-list-item{
+      min-height: 25px;
+      .small-list{
+        font-size: 12px !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+        padding: 0px !important;
+        height: 25px !important;
+      }
+  }
+}
+//signin
+.signin{
+   margin-top: 20%;
+   padding: 50px;
+}
+//sign up
+.Signup{
+  margin-top: 20%;
+  padding: 50px;
+}

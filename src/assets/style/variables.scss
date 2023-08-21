@@ -1,0 +1,63 @@
+$first-color:#FEA116;
+$second-color:#fff;
+
+//general classes
+.general-btn{
+    background-color: $first-color !important;
+    color: $second-color !important;
+    padding: 5% !important;
+    font-size: 15px !important;        
+
+};
+// head-address
+.head-address{
+    margin: 40px 0px;
+    text-align: center;
+    h5{
+        font-family: 'Pacifico';
+        font-weight: 100;
+        color: $first-color;
+        font-size: 1.5rem;
+        margin: 10px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: $first-color;
+            width: 45px;
+            height: 2px;
+            right: 39%;
+            top: 50%;
+            @media screen and (max-width: 1000px) {
+               background-color: transparent;
+            }
+
+        } 
+        &::before{
+            content: '';
+            position: absolute;
+            background-color: $first-color;
+            width: 45px;
+            height: 2px;
+            left: 39%;
+            top: 50%;
+            @media screen and (max-width: 1000px) {
+                background-color: transparent;
+             } 
+        }       
+    }
+}
+.pr{
+    padding-right: 10px;
+}
+.m{
+    margin: 15px 0px;
+}
+@media screen and (max-width: 1000px) and (min-width: 800px) {
+    .max-H{
+        padding: 0 10px;
+        max-height: 50px;
+
+    }
+   } ;
+   
