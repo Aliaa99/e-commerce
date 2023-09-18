@@ -5,8 +5,11 @@ $second-color:#fff;
 .general-btn{
     background-color: $first-color !important;
     color: $second-color !important;
-    padding: 5% !important;
-    font-size: 15px !important;        
+    padding: 5px !important;
+    font-size: 10px !important;  
+    position: absolute;
+    bottom: 5px;
+    right: 5px;      
 
 };
 // head-address

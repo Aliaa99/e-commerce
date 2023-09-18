@@ -6,9 +6,9 @@ header{
     position: absolute;
     top:0px;
     box-shadow: none !important;
-    &.onScroll {
-        background-color: black !important; 
-    }
+    // &.onScroll {
+    //     background-color: black !important; 
+    // }
     img{
         width: 50px;
         height: 50px;
@@ -85,3 +85,136 @@ header{
   margin-top: 20%;
   padding: 50px;
 }
+
+
+//categories
+.Categories{
+  .v-btn{
+    background-color: $first-color !important;
+    color: white;
+    padding: 50px 20px !important;
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+//mainhead 
+.mainhead{
+  color: orange;
+  text-align: center;
+  margin: 40px 0px;
+  position: relative;
+  &::after{
+    content: '';
+    bottom: 0;
+    left: 45%;
+    right: 45%;
+    height: 2px;
+    position: absolute;
+    width: 10%;
+    background-color: $first-color;
+  }  
+}
+
+//products
+.product-item{
+  padding: 15px;
+  height: 300px;
+  overflow: hidden;
+  img{
+   width: 100%;
+   height: 200px;
+  }
+  h5{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: "----";
+
+  }
+  p{
+    color: $first-color;
+  }
+}
+
+  //footer
+  .footer{
+    padding: 60px 20px;
+    background-color: #0F172B !important;
+  .head-title{
+    font-size: 25px;
+    color: $first-color;
+    font-family: "Pacifico";
+  }
+  .v-list{
+    background-color: transparent;
+    padding: 20px 0px;
+    .v-list-item{
+      max-height: 0px;
+      min-height: 25px !important;
+      .v-list-item__icon{
+        margin: 0px;
+        .v-icon{
+          color: white;
+        }
+      }
+      .v-btn{
+        background-color: transparent;
+        color: white;
+        padding: 0px;
+      }
+    }
+    .liststyle{
+      color: white;
+      overflow: visible;
+      text-overflow: initial;
+      white-space: unset;    
+    }
+  }
+  .colorstyle{
+    color: white;
+  }
+  .contact{
+    margin: 15px 0px;
+    padding: 0px;
+
+  }
+  .v-form{
+    position: relative;
+    .v-input__slot{
+      background-color: white;
+      height: 50px;
+  
+    }
+    .v-label{
+      padding: 0px 10px;
+      font-size: 15px;
+    }
+    .v-btn{
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      height: 35px;
+      background-color: $first-color;
+      color: white;
+    }
+  }
+  //social
+  .footer-social{
+    .v-btn{
+      padding: 5px;
+      min-width: 25px;
+      background-color: transparent;
+      font-size: 1rem;
+      color: white;
+      margin: 5px;
+      border: 1px solid white;
+      border-radius: 50%;
+      &:hover{
+        background-color: $first-color;
+      }        
+    }
+  }
+}
+
+
+
