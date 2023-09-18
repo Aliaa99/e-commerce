@@ -12,7 +12,7 @@
                         <v-text-field label="password" type="password" v-model="details.password">
                         </v-text-field>
 
-                        <v-btn @click="login">
+                        <v-btn type="submit" @click="login()">
                             signin
                         </v-btn>
                     </v-form>
@@ -21,11 +21,37 @@
     </v-container>
 </template>
 <script>
-   export default{
-    name:'Signin',
+import axios from 'axios';
+  export default {
+    // props:{
+    //     isAuthenticated:false
+    // },
+    name: 'signin',
     data: () => ({
         details:{email:"" , password:""},
     }),
+    methods:{
+        login(){
+        this.axios.post('https://reqres.in/api/login',{ ...this.details}).then((res) => {
+            const { data } = res;
+            localStorage.setItem("token", data.token);
+            // this.$store.commit('TOGGLE_NAV',true);
+            this.$router.push('/');
 
-   }
+       
+            })
+
+        }, 
+        
+    },
+    computed: {
+        // isAuthenticated() {
+        //     return localStorage.getItem('token') ? true : false
+        // }
+    }
+    
+       
+    
+
+ }
 </script>

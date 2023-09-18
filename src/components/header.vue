@@ -54,6 +54,7 @@ export default {
       {ex:'category2',route:'category2'},
       {ex:'category3',route:'category3'}],type:'Array',icon:'mdi-menu-down'},
       {name:'products',value:'',type:'text',icon:'',route:'/products'},
+      {name:'jewelery',value:'',type:'text',icon:'',route:'/jewelery'},
     ],
 
     view: {

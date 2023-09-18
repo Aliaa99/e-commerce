@@ -2,11 +2,11 @@
     
     <div>
         <v-container>
-            <v-btn @click="gogo()">
+            <!-- <v-btn @click="gogo()">
                 go
-            </v-btn>
+            </v-btn> -->
               <v-row>
-                <v-col col-lg-3 col-md-4
+                <v-col cols="3"
                 v-for="item in info" :key="item.id">
                 <v-card class="product-item">
                     <div>
@@ -40,6 +40,10 @@
             })
 
             }
-        }
+        },
+        beforeMount() {
+            this.gogo()
+    },
+
     }
 </script>
