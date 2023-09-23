@@ -18,18 +18,19 @@
   <!-- nav list  -->
   
       <div class="nav-list "  v-if="this.X" >
-        <v-menu  v-for='item in items' :key='item.id'>
-          <template v-slot:activator="{ on }" >
+        <v-menu  v-for='item in items' :key='item.id'  >
+          <template v-slot:activator="{ on }"   >
               <v-btn class="nav-btn small"
                 v-on="on" 
                 :to="item.route"
+                
               > 
                 {{item.name}}
                 <v-icon>{{item.icon}}</v-icon>
               </v-btn>
           </template>
           <v-list v-for='element in item.value ' :key='element.id' >
-            <v-list-item>
+            <v-list-item >
               <v-list-item-title v-if="item.type = Array"> 
                 <v-btn class="small-list" :to="element.route">{{ element.ex }}</v-btn>
               </v-list-item-title>
@@ -40,19 +41,21 @@
   </v-app-bar>
 </template>
 <script>
+
 export default {
   name: 'Header',
 
   data: () => ({
     items:[
     {name:'Home',value:'' ,type:'text',icon:'',route:'/home'},
-    {name:'Signin',value:'',type:'text',icon:'',route:'/Signin'},
-    {name:'Signup',value:'',type:'text',icon:'',route:'/Signup'},
     {name:'about',value:'',type:'text',icon:'',route:'/about'},
     {name:'category',value:[
       {ex:'jewelery' ,route:'/jewelery'},
       {ex:'electronics',route:'/jewelery'},],type:'Array',icon:'mdi-menu-down'},
       {name:'products',value:'',type:'text',icon:'',route:'/products'},
+      {name:'',value:'',type:'text',icon:'mdi-cart',route:'/Cart'},
+      {name:'Logout',value:'',type:'text',icon:'',route:'/Signin'},
+
     ],
 
     view: {
@@ -79,7 +82,14 @@ export default {
       this.X =!this.X
       console.log(this.X)
     }
+  },
+  computed:{
+    // togglelist(){
+    //   return  this.$store.getters.changeheader
+
+    // }
   }
+
 
 };
 </script>

@@ -22,6 +22,7 @@
 </template>
 <script>
 import axios from 'axios';
+// import '@/store'
   export default {
     // props:{
     //     isAuthenticated:false
@@ -35,7 +36,7 @@ import axios from 'axios';
         this.axios.post('https://reqres.in/api/login',{ ...this.details}).then((res) => {
             const { data } = res;
             localStorage.setItem("token", data.token);
-            // this.$store.commit('TOGGLE_NAV',true);
+            // this.$store.commit('getauth',true);
             this.$router.push('/home');
             });
 

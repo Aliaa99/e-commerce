@@ -1,6 +1,9 @@
 <template>
     <div>
-   
+      <div>
+        <Header />
+      </div>
+  
       <div>
         <products />
       </div>
@@ -12,7 +15,8 @@
   
   <script>
     import Products from '../components/Products';
-  
+    import Header from '../components/header.vue';
+
     export default {
       name: 'ProductsView',
   
@@ -21,7 +25,8 @@
       }),
   
       components: {
-        Products
+        Products,
+        Header
       },
     }
   </script>

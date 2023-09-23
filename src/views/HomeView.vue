@@ -1,6 +1,9 @@
 <template>
   <div>
     <div>
+      <Header/>
+    </div>
+    <div>
     <carousle />
     </div>
     <div>
@@ -20,6 +23,7 @@
   import Carousle from '@/components/Carousle';
   import Categories from '../components/Categories';
   import Products from '../components/Products';
+  import Header from '../components/header.vue';
 
   export default {
     name: 'Home',
@@ -31,7 +35,8 @@
     components: {
       Carousle,
       Categories,
-      Products
+      Products,
+      Header
     },
   }
 </script>

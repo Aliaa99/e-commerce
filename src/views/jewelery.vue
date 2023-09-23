@@ -2,6 +2,10 @@
     
     <div>
         <v-container>
+            <div>
+                <Header />
+              </div>
+                  
             <!-- <v-btn @click="gogo()">
                 go
             </v-btn> -->
@@ -25,25 +29,30 @@
     </div>
 </template>
 <script>
-    export default{
-        name:'jewelery',
-        data:() =>({
-            info:''
-        }),
-        methods:{
-            gogo(){
-                this.axios.get('https://fakestoreapi.com/products/category/jewelery')
-                .then(response =>{
-                const { data } = response;
-                this.info = data
-                console.log(this.info)
-            })
+  import Header from '../components/header.vue';
 
-            }
-        },
-        beforeMount() {
-            this.gogo()
+export default{
+    name:'jewelery',
+    data:() =>({
+        info:''
+    }),
+    methods:{
+        gogo(){
+            this.axios.get('https://fakestoreapi.com/products/category/jewelery')
+            .then(response =>{
+            const { data } = response;
+            this.info = data
+            console.log(this.info)
+        })
+
+        }
     },
+    beforeMount() {
+        this.gogo()
+    },
+    components:{
+      Header
+  }
 
-    }
+}
 </script>

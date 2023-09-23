@@ -11,7 +11,7 @@
                     <div>
                         <h5>{{item.title}}</h5>
                         <p>{{item.price}} $</p>    
-                        <v-btn class="general-btn">buy now</v-btn>
+                        <v-btn @click="getproduct(item)" class="general-btn">buy now</v-btn>
                     </div>
                 </v-card>
             </v-col>
@@ -24,6 +24,8 @@
     name :'Products',
     data:() =>({
         info:'',
+        oneproduct:[],
+        oneproductid:''
     }),
     methods:{
         Products(){
@@ -33,6 +35,13 @@
             this.info = data
             console.log(this.info)
             })
+        },
+        getproduct(item){
+        this.oneproductid=item.id;
+        console.log(this.oneproductid)
+        this.oneproduct=item
+        console.log(this.oneproduct)
+        this.$store.commit('takeproduct',this.oneproduct)
         },
     },
     beforeMount() {
