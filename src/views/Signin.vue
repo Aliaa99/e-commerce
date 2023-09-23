@@ -36,10 +36,8 @@ import axios from 'axios';
             const { data } = res;
             localStorage.setItem("token", data.token);
             // this.$store.commit('TOGGLE_NAV',true);
-            this.$router.push('/');
-
-       
-            })
+            this.$router.push('/home');
+            });
 
         }, 
         

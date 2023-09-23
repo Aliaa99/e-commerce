@@ -45,16 +45,14 @@ export default {
 
   data: () => ({
     items:[
-    {name:'Home',value:'' ,type:'text',icon:'',route:'/'},
+    {name:'Home',value:'' ,type:'text',icon:'',route:'/home'},
     {name:'Signin',value:'',type:'text',icon:'',route:'/Signin'},
     {name:'Signup',value:'',type:'text',icon:'',route:'/Signup'},
     {name:'about',value:'',type:'text',icon:'',route:'/about'},
     {name:'category',value:[
-      {ex:'category1' ,route:'category1'},
-      {ex:'category2',route:'category2'},
-      {ex:'category3',route:'category3'}],type:'Array',icon:'mdi-menu-down'},
+      {ex:'jewelery' ,route:'/jewelery'},
+      {ex:'electronics',route:'/jewelery'},],type:'Array',icon:'mdi-menu-down'},
       {name:'products',value:'',type:'text',icon:'',route:'/products'},
-      {name:'jewelery',value:'',type:'text',icon:'',route:'/jewelery'},
     ],
 
     view: {
