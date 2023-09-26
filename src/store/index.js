@@ -14,7 +14,7 @@ export default new Vuex.Store({
     },
     shopping(state){
       return state.cartinfo
-    }
+    },
   },
   mutations: {
     getauth(state,value){
